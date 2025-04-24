@@ -26,9 +26,9 @@ export default function RedesignedCta() {
             <AnimatedKoru width={200} height={200} color="#333" />
           </div>
 
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 relative z-10">Curious What AI Could Save You?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 relative z-10">Ready to Transform Your Workflow?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90 relative z-10">
-            Discover how many hours (and dollars) you're leaving on the table.
+            Join businesses that have revolutionized their operations with Mohios.
           </p>
           <div className="flex justify-center relative z-10">
             <Button
@@ -37,7 +37,7 @@ export default function RedesignedCta() {
               asChild
             >
               <Link href="https://calendar.app.google/3ArxYeXL8CVTKT5V6" target="_blank" rel="noopener noreferrer">
-                Reveal My AI Savings Potential →
+                Schedule a Demo
               </Link>
             </Button>
           </div>
