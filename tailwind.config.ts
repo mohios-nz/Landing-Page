@@ -21,7 +21,7 @@ const config = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
+        border: 'hsl(240, 4.8%, 83.9%)', // 👈 this defines the color token `border`
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
