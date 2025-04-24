@@ -1,12 +1,12 @@
-import type { Config } from "tailwindcss"
-import { fontFamily } from "tailwindcss/defaultTheme"
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     container: {
@@ -18,7 +18,7 @@ const config: Config = {
     },
     extend: {
       colors: {
-        border: 'hsl(240, 4.8%, 83.9%)',
+        border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
@@ -51,6 +51,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Morning rain palette
         morningRain: {
           cream: "#F0E5D7",
           sage: "#C7CBBD",
@@ -79,7 +80,12 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
+        sans: ["var(--font-sans)", ...require("tailwindcss/defaultTheme").fontFamily.sans],
       },
       backgroundImage: {
-        "pastel-gradient": "linear-gradient(to right, var(--
+        "pastel-gradient": "linear-gradient(to right, var(--pastel-start), var(--pastel-end))",
+      },
+    },
+  },
+  plugins: [require("tailwindcss-animate")],
+}
