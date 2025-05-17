@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss"
-import { fontFamily } from "tailwindcss/defaultTheme"
 
 const config = {
   darkMode: ["class"],
@@ -54,14 +53,6 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Morning rain palette
-        morningRain: {
-          cream: "#F0E5D7",
-          sage: "#C7CBBD",
-          mint: "#C5D7D1",
-          yellow: "#FAEDCD",
-          button: "#9FAEA9",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -81,12 +72,6 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
-      },
-      backgroundImage: {
-        "pastel-gradient": "linear-gradient(to right, var(--pastel-start), var(--pastel-end))",
       },
     },
   },
