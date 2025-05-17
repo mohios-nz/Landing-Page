@@ -28,11 +28,11 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="py-20 px-4 md:px-6 lg:px-8">
+    <section id="testimonials" className="py-20 px-4 md:px-6 lg:px-8 bg-secondary-light">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">There’s a Better Way</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">There's a Better Way</h2>
+          <p className="text-xl text-slate-700 max-w-2xl mx-auto">
             Mohios builds custom Operating Systems that bring structure, automation, and AI into the core of how your
             business runs — so your team is aligned, your tools work together, and your focus shifts from fixing
             problems to growing with clarity.
@@ -41,19 +41,22 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-slate-50">
+            <Card key={index} className="bg-white border-primary-light">
               <CardContent className="pt-6">
                 <Quote className="h-8 w-8 text-primary mb-4" />
-                <p className="text-lg mb-6">"{testimonial.quote}"</p>
+                <p className="text-lg mb-6 text-slate-700">"{testimonial.quote}"</p>
               </CardContent>
               <CardFooter className="flex items-center gap-4">
                 <Avatar>
-                  <AvatarImage src={`/placeholder.svg?height=40&width=40`} alt={testimonial.name} />
-                  <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                  <AvatarImage
+                    src={`/placeholder.svg?height=40&width=40&query=professional headshot`}
+                    alt={testimonial.name}
+                  />
+                  <AvatarFallback className="bg-primary text-white">{testimonial.avatar}</AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-medium">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                  <p className="font-medium text-slate-800">{testimonial.name}</p>
+                  <p className="text-sm text-slate-600">{testimonial.title}</p>
                 </div>
               </CardFooter>
             </Card>

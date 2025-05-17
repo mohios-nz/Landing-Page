@@ -51,7 +51,7 @@ export default function Clients() {
     <section className="py-16 px-4 md:px-6 lg:px-8 bg-white relative">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Trusted by Industry Leaders</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Trusted by Industry Leaders</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Founded by Danny Holtschke, Product Leader, Getting S*it Done nerd, German engineering mind, living in
             Auckland that hates wasting time. Some of the companies I previously worked for:

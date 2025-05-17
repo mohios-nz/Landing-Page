@@ -26,12 +26,32 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          DEFAULT: "#C5D7D1", // Mint pastel
+          foreground: "#333333",
+          light: "#E1EBE7", // Lighter mint
+          dark: "#9FAEA9", // Darker mint
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
+          DEFAULT: "#C7CBBD", // Sage pastel
+          foreground: "#333333",
+          light: "#E3E5DE", // Lighter sage
+          dark: "#A5A99C", // Darker sage
+        },
+        accent: {
+          DEFAULT: "#FAEDCD", // Cream pastel
+          foreground: "#333333",
+          light: "#FDF7E9", // Lighter cream
+          dark: "#E5D9BA", // Darker cream
+        },
+        sand: {
+          DEFAULT: "#F0EBD7", // Sand pastel
+          light: "#F8F5EB", // Lighter sand
+          dark: "#D6D1BF", // Darker sand
+        },
+        slate: {
+          DEFAULT: "#9FAEA9", // Slate pastel
+          light: "#CDD5D2", // Lighter slate
+          dark: "#7A8683", // Darker slate
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -40,10 +60,6 @@ const config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",

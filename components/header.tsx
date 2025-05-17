@@ -13,7 +13,7 @@ export default function Header() {
   }
 
   return (
-    <header className="w-full py-4 px-4 md:px-6 lg:px-8 border-b">
+    <header className="w-full py-4 px-4 md:px-6 lg:px-8 border-b bg-white">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="text-2xl font-bold text-primary">
@@ -23,22 +23,28 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link href="#features" className="text-sm font-medium hover:text-primary">
-            Features
+          <Link href="/#method" className="text-sm font-medium hover:text-primary">
+            Method
           </Link>
-          <Link href="#testimonials" className="text-sm font-medium hover:text-primary">
+          <Link href="/#testimonials" className="text-sm font-medium hover:text-primary">
             Testimonials
           </Link>
-          <Link href="#pricing" className="text-sm font-medium hover:text-primary">
+          <Link href="/about-us" className="text-sm font-medium hover:text-primary">
+            About Us
+          </Link>
+          <Link href="/#pricing" className="text-sm font-medium hover:text-primary">
             Pricing
           </Link>
-          <Link href="#contact" className="text-sm font-medium hover:text-primary">
+          <Link href="/#contact" className="text-sm font-medium hover:text-primary">
             Contact
           </Link>
         </nav>
 
         <div className="hidden md:block">
-          <Button asChild className="bg-[#8bada3] hover:bg-[#7a9c93] text-white">
+          <Button
+            asChild
+            className="bg-primary-dark hover:bg-slate-dark text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+          >
             <Link href="https://calendar.app.google/3ArxYeXL8CVTKT5V6" target="_blank" rel="noopener noreferrer">
               Book AI Advisory Call
             </Link>
@@ -55,19 +61,22 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden py-4 px-4">
           <nav className="flex flex-col space-y-4">
-            <Link href="#features" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
-              Features
+            <Link href="/#method" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
+              Method
             </Link>
-            <Link href="#testimonials" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
+            <Link href="/#testimonials" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
               Testimonials
             </Link>
-            <Link href="#pricing" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
+            <Link href="/about-us" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
+              About Us
+            </Link>
+            <Link href="/#pricing" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
               Pricing
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
+            <Link href="/#contact" className="text-sm font-medium hover:text-primary" onClick={toggleMenu}>
               Contact
             </Link>
-            <Button asChild className="w-full bg-[#8bada3] hover:bg-[#7a9c93] text-white">
+            <Button asChild className="w-full bg-primary-dark hover:bg-slate-dark text-white font-semibold shadow-md">
               <Link href="https://calendar.app.google/3ArxYeXL8CVTKT5V6" target="_blank" rel="noopener noreferrer">
                 Book AI Advisory Call
               </Link>

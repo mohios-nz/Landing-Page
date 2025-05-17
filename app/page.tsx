@@ -1,6 +1,8 @@
 import Header from "@/components/header"
 import Hero from "@/components/hero"
-import Features from "@/components/features"
+import ProblemSolution from "@/components/problem-solution"
+import Method from "@/components/method"
+import WhatYouGet from "@/components/what-you-get"
 import Testimonials from "@/components/testimonials"
 import Clients from "@/components/clients"
 import Pricing from "@/components/pricing"
@@ -13,7 +15,9 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <Features />
+        <ProblemSolution />
+        <Method />
+        <WhatYouGet />
         <Testimonials />
         <Clients />
         <Pricing />

@@ -53,7 +53,7 @@ export default function Pricing() {
     <section id="pricing" className="py-20 px-4 md:px-6 lg:px-8 bg-slate-50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Simple, Transparent Pricing</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Choose the plan that works best for your business needs.
           </p>
@@ -74,8 +74,8 @@ export default function Pricing() {
 
               <div className="p-6">
                 <div className="text-sm text-gray-500 mb-1">{plan.subtitle}</div>
-                <h3 className="text-2xl font-bold mb-1">{plan.name}</h3>
-                <div className="text-4xl font-bold mb-2">{plan.price}</div>
+                <h3 className="text-2xl font-bold mb-1 text-black">{plan.name}</h3>
+                <div className="text-4xl font-bold mb-2 text-black">{plan.price}</div>
                 <p className="text-gray-600 mb-6">{plan.description}</p>
 
                 <ul className="space-y-4 mb-8">
@@ -109,7 +109,7 @@ export default function Pricing() {
           <div className="bg-white rounded-lg border border-[#8bada3]/30 shadow-sm p-8">
             <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
               <div className="mb-6 lg:mb-0">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Ongoing OS Partner Retainer</h3>
+                <h3 className="text-2xl font-bold text-black mb-2">Ongoing OS Partner Retainer</h3>
                 <p className="text-gray-600 mb-6">
                   For scaling businesses needing continuous support and workflow evolution.
                 </p>
