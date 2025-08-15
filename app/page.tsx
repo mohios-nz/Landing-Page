@@ -75,6 +75,7 @@ export default function AIEdgeSessionLanding() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-6">
                 <Button
+                  id="cta-book"
                   size="lg"
                   className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg"
                   onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
@@ -82,6 +83,7 @@ export default function AIEdgeSessionLanding() {
                   Book Your AI Edge Session
                 </Button>
                 <Button
+                  id="cta-quiz"
                   variant="outline"
                   size="lg"
                   className="px-8 py-3 text-lg bg-transparent border-accent/30 hover:bg-accent/10"
@@ -91,9 +93,7 @@ export default function AIEdgeSessionLanding() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground">
-                ✓ No commitment required ✓ Immediate insights
-              </p>
+              <p className="text-sm text-muted-foreground">✓ No commitment required ✓ Immediate insights</p>
             </div>
 
             {/* Right Column - Image Collage */}
@@ -487,6 +487,7 @@ export default function AIEdgeSessionLanding() {
                 </div>
                 <div className="pt-6">
                   <Button
+                    id="cta-book"
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 text-lg"
                     onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
                   >
@@ -512,6 +513,7 @@ export default function AIEdgeSessionLanding() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
+                id="cta-book"
                 size="lg"
                 className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg"
                 onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
@@ -519,6 +521,7 @@ export default function AIEdgeSessionLanding() {
                 Book Your AI Edge Session
               </Button>
               <Button
+                id="cta-quiz"
                 variant="outline"
                 size="lg"
                 className="px-8 py-3 text-lg bg-transparent"
@@ -616,6 +619,7 @@ export default function AIEdgeSessionLanding() {
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-t border-border p-4 shadow-lg">
         <div className="flex gap-3 max-w-sm mx-auto">
           <Button
+            id="cta-quiz"
             size="sm"
             className="flex-1 text-sm border-accent/30 hover:bg-accent/10 bg-transparent"
             onClick={() => window.open("https://perspective.co/quiz", "_blank")}
@@ -623,6 +627,7 @@ export default function AIEdgeSessionLanding() {
             Take Quiz
           </Button>
           <Button
+            id="cta-book"
             variant="outline"
             size="sm"
             className="flex-[2] bg-accent hover:bg-accent/90 text-accent-foreground text-sm font-semibold"

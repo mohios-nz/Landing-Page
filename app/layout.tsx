@@ -72,6 +72,41 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-WB4F0LWQ4B"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-WB4F0LWQ4B');
+            `,
+          }}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('DOMContentLoaded', function () {
+                var quizBtns = document.querySelectorAll('#cta-quiz');
+                var bookBtns = document.querySelectorAll('#cta-book');
+                
+                quizBtns.forEach(function(btn) {
+                  btn.addEventListener('click', function () {
+                    gtag('event', 'generate_lead', { method: 'quiz' });
+                  });
+                });
+                
+                bookBtns.forEach(function(btn) {
+                  btn.addEventListener('click', function () {
+                    gtag('event', 'schedule', { method: 'calendar' });
+                  });
+                });
+              });
+            `,
+          }}
+        />
+
         <link rel="preconnect" href="https://perspective.co" />
         <link rel="dns-prefetch" href="https://perspective.co" />
         <link rel="preconnect" href="https://calendar.app.google" />
