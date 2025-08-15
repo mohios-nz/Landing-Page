@@ -167,6 +167,30 @@ export default function RootLayout({
                         text: "Yes! If we can't identify clear time or cost savings opportunities during your session, you don't pay. We're confident every business has automation potential – we just need to find it together.",
                       },
                     },
+                    {
+                      "@type": "Question",
+                      name: "What is the AI Edge Session?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "A founder-led, 2-hour session for Auckland SMEs. We diagnose time and cost savings, implement one quick-win automation, and deliver a strategic roadmap.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Do you work only in Auckland?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "We operate in Auckland in person and run virtual sessions via Zoom for clients across New Zealand.",
+                      },
+                    },
+                    {
+                      "@type": "Question",
+                      name: "Is there a guarantee?",
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: "Yes. If we cannot identify clear savings or ship a quick-win automation, you don't pay.",
+                      },
+                    },
                   ],
                 },
               ],
