@@ -3,7 +3,20 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Clock, Users, Target, MapPin, ArrowRight, Zap, TrendingUp, Shield } from "lucide-react"
+import {
+  CheckCircle,
+  Clock,
+  Users,
+  Target,
+  ArrowRight,
+  Zap,
+  TrendingUp,
+  Shield,
+  Sparkles,
+  Brain,
+  Cpu,
+} from "lucide-react"
+import Image from "next/image"
 
 export default function AIEdgeSessionLanding() {
   return (
@@ -17,14 +30,13 @@ export default function AIEdgeSessionLanding() {
                 <span className="text-primary-foreground font-bold text-sm">M</span>
               </div>
               <span className="font-heading font-bold text-xl text-foreground">Mohios</span>
-              
             </div>
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
                 Services
               </a>
-              <a href="#process" className="text-muted-foreground hover:text-foreground transition-colors">
-                Process
+              <a href="#results" className="text-muted-foreground hover:text-foreground transition-colors">
+                Results
               </a>
               <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
@@ -38,36 +50,99 @@ export default function AIEdgeSessionLanding() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-20 lg:py-32 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-6">
-              <MapPin className="w-3 h-3 mr-1" />
-              Auckland-Based AI Experts
-            </Badge>
-            <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-              AI Automation Consulting &amp; Training in Auckland 
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              Start with an AI Edge Session and discover where AI can save you time, cut costs, and give your business a competitive edge.     
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg">
-                Take the AI Savings Quiz
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="px-8 py-3 text-lg bg-transparent"
-                onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
-              >
-                Book Your AI Edge Session
-              </Button>
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-accent/5 to-primary/10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)] opacity-60"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(120,119,198,0.08),transparent_50%)] opacity-40"></div>
+          {/* Subtle grid pattern for tech feel */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(120,119,198,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(120,119,198,0.03)_1px,transparent_1px)] bg-[size:50px_50px] opacity-30"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <div className="max-w-2xl">
+              <Badge className="mb-6 bg-accent text-accent-foreground">
+                <Sparkles className="w-3 h-3 mr-1" />
+                Auckland-Based AI Experts
+              </Badge>
+              <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
+                AI Automation Consulting &amp; Training in Auckland
+              </h1>
+              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+                Start with an AI Edge Session and discover where AI can save you time, cut costs, and give your business
+                a competitive edge.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-6">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg"
+                  onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
+                >
+                  Book Your AI Edge Session
+                </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-3 text-lg bg-transparent border-accent/30 hover:bg-accent/10"
+                  onClick={() => window.open("https://perspective.co/quiz", "_blank")}
+                >
+                  Take the AI Savings Quiz
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                ✓ No commitment required • ✓ Auckland-based experts • ✓ Immediate insights
+              </p>
             </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              ✓ No commitment required • ✓ Auckland-based experts • ✓ Immediate insights
-            </p>
+
+            {/* Right Column - Image Collage */}
+            <div className="relative">
+              {/* Main featured image */}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <Image
+                  src="/images/workshop-2.jpg"
+                  alt="AI consulting workshop in Auckland - collaborative strategic planning session"
+                  width={500}
+                  height={350}
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+              </div>
+
+              {/* Floating accent images */}
+              <div className="absolute -top-8 -right-8 w-32 h-32 rounded-xl overflow-hidden shadow-lg transform -rotate-12 hover:rotate-0 transition-transform duration-300 border-4 border-background">
+                <Image
+                  src="/images/workshop-4.jpg"
+                  alt="Strategic planning with sticky notes and workflow mapping"
+                  width={128}
+                  height={128}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="absolute -bottom-6 -left-6 w-40 h-28 rounded-xl overflow-hidden shadow-lg transform rotate-6 hover:rotate-0 transition-transform duration-300 border-4 border-background">
+                <Image
+                  src="/images/workshop-1.jpg"
+                  alt="Hands-on AI strategy development and business process analysis"
+                  width={160}
+                  height={112}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* AI-themed floating elements */}
+              <div className="absolute top-1/4 -left-4 w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-accent/30">
+                <Brain className="w-6 h-6 text-accent" />
+              </div>
+
+              <div className="absolute bottom-1/3 -right-4 w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-primary/30">
+                <Cpu className="w-5 h-5 text-primary" />
+              </div>
+
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-radial from-accent/10 via-transparent to-transparent opacity-50 pointer-events-none"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -155,51 +230,8 @@ export default function AIEdgeSessionLanding() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section id="process" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4">Simple 3-Step Process</h2>
-            <p className="text-lg text-muted-foreground">
-              From assessment to implementation roadmap in just a few steps
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  1
-                </div>
-                <h3 className="font-heading font-semibold text-xl mb-3">Take the AI Savings Quiz</h3>
-                <p className="text-muted-foreground">
-                  Quick, tailored assessment of your business to understand your current state and potential.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  2
-                </div>
-                <h3 className="font-heading font-semibold text-xl mb-3">Join your AI Edge Session</h3>
-                <p className="text-muted-foreground">
-                  70% diagnosis, 30% strategy & training in a focused 2-hour session tailored to your business.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  3
-                </div>
-                <h3 className="font-heading font-semibold text-xl mb-3">Get your Custom Roadmap</h3>
-                <p className="text-muted-foreground">
-                  Practical AI implementation plan with prioritized next steps and expected ROI.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Case Study Section */}
-      <section className="py-20 bg-background">
+      <section id="results" className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -210,6 +242,25 @@ export default function AIEdgeSessionLanding() {
                 See how AI automation transformed this local SME's operations
               </p>
             </div>
+
+            <div className="mb-12 text-center">
+              <div className="relative inline-block rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/workshop-3.jpg"
+                  alt="Real AI workshop session - collaborative ideation and strategic planning"
+                  width={600}
+                  height={400}
+                  className="w-full max-w-2xl h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="text-white text-sm font-medium bg-black/50 backdrop-blur-sm rounded-lg px-3 py-2">
+                    Real workshop session: Collaborative AI strategy development with Auckland entrepreneurs
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <Card className="p-8 bg-destructive/5 border-destructive/20">
                 <CardHeader className="pb-4">
@@ -274,57 +325,6 @@ export default function AIEdgeSessionLanding() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4">
-              Investment in Your AI Future
-            </h2>
-            <p className="text-lg text-muted-foreground">Comprehensive AI assessment and strategic roadmap</p>
-          </div>
-          <div className="max-w-lg mx-auto">
-            <Card className="p-8 border-accent/30 bg-background shadow-lg">
-              <CardHeader className="text-center pb-6">
-                <Badge className="mx-auto mb-4 bg-accent text-accent-foreground">Introductory Offer</Badge>
-                <div className="text-4xl font-heading font-bold text-foreground mb-2">NZD $800</div>
-                <p className="text-muted-foreground">Complete AI Edge Session Package</p>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                  <span>AI Savings Quiz analysis</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                  <span>2-hour strategic AI session</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                  <span>Detailed implementation roadmap</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                  <span>Prioritized action items</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
-                  <span>Follow-up email support</span>
-                </div>
-                <div className="pt-6">
-                  <Button
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 text-lg"
-                    onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
-                  >
-                    Book Your AI Edge Session
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -335,6 +335,47 @@ export default function AIEdgeSessionLanding() {
             <p className="text-lg text-muted-foreground">Everything you need to know about the AI Edge Session</p>
           </div>
           <div className="max-w-3xl mx-auto space-y-6">
+            <Card className="p-6">
+              <CardHeader className="pb-3">
+                <CardTitle className="font-heading font-semibold text-lg">
+                  How does the AI Edge Session process work?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Our simple 3-step process takes you from assessment to implementation roadmap:
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                      1
+                    </div>
+                    <div>
+                      <strong>Take the AI Savings Quiz:</strong> Quick, tailored assessment of your business to
+                      understand your current state and potential.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                      2
+                    </div>
+                    <div>
+                      <strong>Join your AI Edge Session:</strong> 70% diagnosis, 30% strategy & training in a focused
+                      2-hour session tailored to your business.
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 bg-accent text-accent-foreground rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0 mt-0.5">
+                      3
+                    </div>
+                    <div>
+                      <strong>Get your Custom Roadmap:</strong> Practical AI implementation plan with prioritized next
+                      steps and expected ROI.
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
             <Card className="p-6">
               <CardHeader className="pb-3">
                 <CardTitle className="font-heading font-semibold text-lg">What if I'm completely new to AI?</CardTitle>
@@ -407,6 +448,57 @@ export default function AIEdgeSessionLanding() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl lg:text-4xl text-foreground mb-4">
+              Investment in Your AI Future
+            </h2>
+            <p className="text-lg text-muted-foreground">Comprehensive AI assessment and strategic roadmap</p>
+          </div>
+          <div className="max-w-lg mx-auto">
+            <Card className="p-8 border-accent/30 bg-background shadow-lg">
+              <CardHeader className="text-center pb-6">
+                <Badge className="mx-auto mb-4 bg-accent text-accent-foreground">Introductory Offer</Badge>
+                <div className="text-4xl font-heading font-bold text-foreground mb-2">NZD $800</div>
+                <p className="text-muted-foreground">Complete AI Edge Session Package</p>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                  <span>AI Savings Quiz analysis</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                  <span>2-hour strategic AI session</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                  <span>Detailed implementation roadmap</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                  <span>Prioritized action items</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
+                  <span>Follow-up email support</span>
+                </div>
+                <div className="pt-6">
+                  <Button
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground py-3 text-lg"
+                    onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
+                  >
+                    Book Your AI Edge Session
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="py-20 bg-accent/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -419,21 +511,32 @@ export default function AIEdgeSessionLanding() {
               assessment or book directly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg">
-                Take the AI Savings Quiz
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg"
+                onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
+              >
+                Book Your AI Edge Session
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 className="px-8 py-3 text-lg bg-transparent"
-                onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
+                onClick={() => window.open("https://perspective.co/quiz", "_blank")}
               >
-                Book Your AI Edge Session
+                Take the AI Savings Quiz
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-6">
-              Questions? Email us at danny@mohios.com or call (021) 030-5430
+              Questions? Email us at{" "}
+              <a href="mailto:danny@mohios.com" className="hover:text-foreground transition-colors">
+                danny@mohios.com
+              </a>{" "}
+              or call{" "}
+              <a href="tel:+64210305430" className="hover:text-foreground transition-colors">
+                +64 21 030 5430
+              </a>
             </p>
           </div>
         </div>
@@ -484,8 +587,16 @@ export default function AIEdgeSessionLanding() {
             <div>
               <h4 className="font-heading font-semibold text-foreground mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>danny@mohios.com</li>
-                <li>(021) 021-5430</li>
+                <li>
+                  <a href="mailto:danny@mohios.com" className="hover:text-foreground transition-colors">
+                    danny@mohios.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+64210305430" className="hover:text-foreground transition-colors">
+                    +64 21 030 5430
+                  </a>
+                </li>
                 <li>Auckland, New Zealand</li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors">
@@ -500,6 +611,27 @@ export default function AIEdgeSessionLanding() {
           </div>
         </div>
       </footer>
+
+      {/* Sticky mobile CTA bar */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-t border-border p-4 shadow-lg">
+        <div className="flex gap-3 max-w-sm mx-auto">
+          <Button
+            size="sm"
+            className="flex-1 text-sm border-accent/30 hover:bg-accent/10 bg-transparent"
+            onClick={() => window.open("https://perspective.co/quiz", "_blank")}
+          >
+            Take Quiz
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="flex-[2] bg-accent hover:bg-accent/90 text-accent-foreground text-sm font-semibold"
+            onClick={() => window.open("https://calendar.app.google/swyBFrFRYuA3ug8N8", "_blank")}
+          >
+            Book AI Edge Session
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }
