@@ -17,9 +17,7 @@ export default function AIEdgeSessionLanding() {
                 <span className="text-primary-foreground font-bold text-sm">M</span>
               </div>
               <span className="font-heading font-bold text-xl text-foreground">Mohios</span>
-              <Badge variant="secondary" className="ml-2 text-xs">
-                Auckland
-              </Badge>
+              
             </div>
             <nav className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -48,11 +46,10 @@ export default function AIEdgeSessionLanding() {
               Auckland-Based AI Experts
             </Badge>
             <h1 className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-foreground mb-6 leading-tight">
-              AI Automation Consulting & Training in Auckland Start with an AI Edge Session
+              AI Automation Consulting &amp; Training in Auckland 
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-              In just 2 hours, discover where AI can save you time, cut costs, and give your business a competitive
-              edge.
+              Start with an AI Edge Session and discover where AI can save you time, cut costs, and give your business a competitive edge.     
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-3 text-lg">
@@ -83,7 +80,7 @@ export default function AIEdgeSessionLanding() {
               What You'll Get from Your AI Edge Session
             </h2>
             <p className="text-lg text-muted-foreground">
-              A comprehensive diagnostic and strategic roadmap tailored to your Auckland business
+              A comprehensive diagnostic and strategic roadmap tailored to your business
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -248,7 +245,7 @@ export default function AIEdgeSessionLanding() {
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent" />
-                    <span>2 hours/week on data management (87% reduction)</span>
+                    <span>2 hours/week on data management</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent" />
@@ -256,7 +253,7 @@ export default function AIEdgeSessionLanding() {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent" />
-                    <span>$800/month in administrative costs (67% savings)</span>
+                    <span>$800/month in admin cost savings</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-accent" />
@@ -436,7 +433,7 @@ export default function AIEdgeSessionLanding() {
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-6">
-              Questions? Email us at hello@mohios.com or call (09) 123-4567
+              Questions? Email us at danny@mohios.com or call (021) 030-5430
             </p>
           </div>
         </div>
@@ -487,8 +484,8 @@ export default function AIEdgeSessionLanding() {
             <div>
               <h4 className="font-heading font-semibold text-foreground mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>hello@mohios.com</li>
-                <li>(09) 123-4567</li>
+                <li>danny@mohios.com</li>
+                <li>(021) 021-5430</li>
                 <li>Auckland, New Zealand</li>
                 <li>
                   <a href="#" className="hover:text-foreground transition-colors">
@@ -499,7 +496,7 @@ export default function AIEdgeSessionLanding() {
             </div>
           </div>
           <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Mohios. All rights reserved. | Clarity & Leverage Through AI</p>
+            <p>© 2025 Mohios. All rights reserved. | Clarity &amp; Leverage Through AI</p>
           </div>
         </div>
       </footer>
