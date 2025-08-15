@@ -92,7 +92,7 @@ export default function AIEdgeSessionLanding() {
                 </Button>
               </div>
               <p className="text-sm text-muted-foreground">
-                ✓ No commitment required • ✓ Auckland-based experts • ✓ Immediate insights
+                ✓ No commitment required ✓ Immediate insights
               </p>
             </div>
 
