@@ -41,8 +41,8 @@ export default function AIEdgeSessionLanding() {
               <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
                 Pricing
               </a>
-              <Button variant="outline" size="sm">
-                Contact
+              <Button variant="outline" size="sm" asChild>
+                <a href="#contact">Contact</a>
               </Button>
             </nav>
           </div>
@@ -546,7 +546,7 @@ export default function AIEdgeSessionLanding() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-muted/30 py-12">
+      <footer id="contact" className="border-t border-border bg-muted/30 py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
