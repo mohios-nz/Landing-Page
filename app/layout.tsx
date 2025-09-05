@@ -1,19 +1,19 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Montserrat } from "next/font/google"
+import { JetBrains_Mono, Work_Sans } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-jetbrains-mono",
 })
 
-const montserrat = Montserrat({
+const workSans = Work_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-montserrat",
-  weight: ["400", "600", "700", "900"],
+  variable: "--font-work-sans",
+  weight: ["400", "500", "600", "700"],
 })
 
 export const metadata: Metadata = {
@@ -70,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${montserrat.variable}`}>
+    <html lang="en" className={`${jetbrainsMono.variable} ${workSans.variable}`}>
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-WB4F0LWQ4B"></script>
         <script
@@ -235,9 +235,10 @@ export default function RootLayout({
 
         <style>{`
 html {
-  font-family: ${inter.style.fontFamily};
-  --font-sans: ${inter.variable};
-  --font-heading: ${montserrat.variable};
+  font-family: ${workSans.style.fontFamily};
+  --font-sans: ${workSans.variable};
+  --font-mono: ${jetbrainsMono.variable};
+  --font-heading: ${jetbrainsMono.variable};
 }
         `}</style>
       </head>
